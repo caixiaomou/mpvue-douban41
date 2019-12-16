@@ -21,7 +21,6 @@ var chalk = require('chalk')
 rm(path.join(config.build.assetsRoot, '*'), err => {
   if (err) throw err
   webpack(webpackConfig, function (err, stats) {
-    spinner.stop()
     if (err) throw err
     if (process.env.PLATFORM === 'swan') {
       utils.writeFrameworkinfo()
